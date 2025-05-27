@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "author": "Rizqi daffa firdaus",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+      { "type": "wokwi-dht22", "id": "dht1", "top": -57.3, "left": -168.6, "attrs": {} }
+    ],
+    "connections": [
+      [ "esp:TX", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX", "$serialMonitor:TX", "", [] ],
+      [ "esp:3V3", "dht1:VCC", "blue", [ "h-14.21", "v38.4", "h-144" ] ],
+      [ "esp:27", "dht1:SDA", "green", [ "h0" ] ],
+      [ "esp:GND.1", "dht1:GND", "black", [ "h0" ] ]
+    ],
+    "dependencies": {}
+  }
